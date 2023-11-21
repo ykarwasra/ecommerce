@@ -12,10 +12,10 @@ const Navbar = () => {
         <p>SHOPPER</p>
       </div>
       <ul className='nav-menu'>
-        <li onClick={()=>setMenu("Shop")}><Link to="/">Shop</Link>{menu==="Shop"?<hr/>:<></>}</li>
-        <li onClick={()=>setMenu("Men")}><Link to="/men">Men</Link>{menu==="Men"?<hr/>:<></>}</li>
-        <li onClick={()=>setMenu("Women")}><Link to="/women">Women</Link>{menu==="Women"?<hr/>:<></>}</li>
-        <li onClick={()=>setMenu("Kids")}><Link to="/kids">Kids</Link>{menu==="Kids"?<hr/>:<></>}</li>
+        <li onClick={()=>setMenu("Shop")}><Link style={{textDecoration:'none'}}to="/">Shop</Link>{menu==="Shop"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li onClick={()=>setMenu("Men")}><Link style={{textDecoration:'none'}}to="/men">Men</Link>{menu==="Men"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li onClick={()=>setMenu("Women")}><Link style={{textDecoration:'none'}}to="/women">Women</Link>{menu==="Women"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li onClick={()=>setMenu("Kids")}><Link style={{textDecoration:'none'}}to="/kids">Kids</Link>{menu==="Kids"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
       </ul>
       <div className='nav-login-cart'>
         <Link to="/login"><button>Login</button></Link>

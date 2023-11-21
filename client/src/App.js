@@ -4,7 +4,11 @@ import Shop from './pages/Shop.jsx';
 import Cart from './pages/Cart.jsx';
 import Product from './pages/Product.jsx';
 import Login from './pages/Login.jsx';
-import Category from './pages/Category.jsx';
+import ShopCategory from './pages/ShopCategory.jsx';
+import Footer from './components/footer/Footer.jsx';
+import men_banner from "./components/asset/men_banner.jpg"
+import kids_banner from "./components/asset/kids_banner.jpg"
+import women_banner from "./components/asset/women_banner.jpg"
 function App() {
   return (
     <div>
@@ -17,10 +21,11 @@ function App() {
           <Route path=':productId' element={<Product/>}/>
           </Route>
           <Route path="/login" element={<Login/>}></Route>
-          <Route path="/men" element={<Category shopCategory="men"/>}></Route>
-          <Route path="/women" element={<Category shopCategory="women"/>}></Route>
-          <Route path="/kids" element={<Category shopCategory="kids"/>}></Route>
+          <Route path="/men" element={<ShopCategory shopCategory="men" banner={men_banner}/>}></Route>
+          <Route path="/women" element={<ShopCategory shopCategory="women" banner={women_banner}/>}></Route>
+          <Route path="/kids" element={<ShopCategory shopCategory="kids" banner={kids_banner}/>}></Route>
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );
