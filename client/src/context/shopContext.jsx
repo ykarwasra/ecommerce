@@ -4,7 +4,7 @@ import allProducts from "../components/asset/allproducts.js";
 
 export const shopContext=createContext(null);
 
-const shopContextProvider=(props)=>{
+const ShopContextProvider=(props)=>{
     const contextValue={allProducts};
 
     return(
@@ -14,4 +14,4 @@ const shopContextProvider=(props)=>{
     )
 }
 
-export default shopContextProvider;
+export default ShopContextProvider;

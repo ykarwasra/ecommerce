@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes} from "react-router-dom";
 import Shop from './pages/Shop.jsx';
 import Cart from './pages/Cart.jsx';
 import Product from './pages/Product.jsx';
-import Login from './pages/Login.jsx';
+import Login from './pages/LoginSignup.jsx';
 import ShopCategory from './pages/ShopCategory.jsx';
 import Footer from './components/footer/Footer.jsx';
 import men_banner from "./components/asset/men_banner.jpg"
