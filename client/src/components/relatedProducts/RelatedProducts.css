@@ -1,0 +1,22 @@
+.relatedproducts{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    height: 56vh;
+    align-items: center;
+}
+.relatedproducts__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 10px;
+    gap: 58px;
+}
+
+.relatedproducts hr{
+    width: 19%;
+    height: 3px;
+    background-color: darkgray;
+    border-radius: 15px;
+}

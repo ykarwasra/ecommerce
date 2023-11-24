@@ -1,44 +1,14 @@
-import striped_tshirt from "./striped_tshirt.jpg";
-import denim_jeans from "./denim_jeans.jpg";
-import casual_dress from "./casual_dress.jpg";
-import sneakers from"./sneakers.jpg";
-import leather_jacket from "./leather_jacket.jpg"
+import kids_tshirt from "./kids_tshirt.jpg";
+import kids_jeans from "./kids_jeans.jpg";
+import kids_dress from "./kids_dress.jpg";
+import kids_sneakers from"./kids_sneakers.jpg";
+import men_polo from "./men_polo.jpg"
 let clothes= [
-    {
-        id: 1,
-        name: "Striped T-shirt",
-        image: striped_tshirt,
-        newPrice: 19.99,
-        oldPrice: 29.99
-      },
-      {
-        id: 2,
-        name: "Denim Jeans",
-        image: denim_jeans,
-        newPrice: 39.99,
-        oldPrice: 49.99
-      },
-      {
-        id: 3,
-        name: "Casual Dress",
-        image: casual_dress,
-        newPrice: 49.99,
-        oldPrice: 59.99
-      },
-      {
-        id: 4,
-        name: "Sneakers",
-        image: sneakers,
-        newPrice: 29.99,
-        oldPrice: 39.99
-      },
-      {
-        id: 5,
-        name: "Leather Jacket",
-        image: leather_jacket,
-        newPrice: 79.99,
-        oldPrice: 99.99
-      }
+    { id: 1, name: 'Kids T-shirt', category: 'kids', oldPrice: 19.99, newPrice: 14.99, image: kids_tshirt},
+    { id: 2, name: 'Kids Jeans', category: 'kids', oldPrice: 29.99, newPrice: 24.99, image: kids_jeans},
+    { id: 3, name: 'Kids Dress', category: 'kids', oldPrice: 39.99, newPrice: 34.99, image: kids_dress},
+    { id: 4, name: 'Kids kids_sneakers', category: 'kids', oldPrice: 24.99, newPrice: 19.99, image: kids_sneakers},
+    { id: 5, name: 'Men Polo Shirt', category: 'men', oldPrice: 29.99, newPrice: 24.99, image: men_polo },
     ];
 
     export default clothes;
