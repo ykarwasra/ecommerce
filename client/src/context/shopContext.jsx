@@ -21,9 +21,27 @@ const ShopContextProvider=(props)=>{
         if (cart[itemID]>0){
             setCart((prevCart)=>({...prevCart, [itemID]: prevCart[itemID]-1}));
             }
+    }
+    const getCartTotal=()=>{
+        let total=0;
+        for(let i=0;i<allProducts.length+1;i++){
+            if(cart[i]>0){
+                const indexinfo=allProducts.find((product)=>product.id===i);
+                total+=indexinfo.newPrice*cart[i];
+            }
         }
-
-    const contextValue={allProducts,cart,addToCart,removeFromCart};
+        return total;
+    }
+    const getCartItem=()=>{
+        let total=0;
+        for(let i=0;i<allProducts.length+1;i++){
+            if(cart[i]>0){
+                total+=cart[i];
+            }
+        }
+        return total;
+    }
+    const contextValue={allProducts,cart,addToCart,removeFromCart,getCartTotal,getCartItem};
     return(
         <shopContext.Provider value={contextValue}>
             {props.children}
@@ -31,4 +49,4 @@ const ShopContextProvider=(props)=>{
     )
 }
 
-export default ShopContextProvider;
+export default ShopContextProvider

@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { shopContext } from '../../context/shopContext'
 import "./CartComponent.css"
 const CartComponent = () => {
-    const {allProducts,removeFromCart,cart}=useContext(shopContext);
+    const {allProducts,removeFromCart,cart,getCartTotal}=useContext(shopContext);
   return (
     <div className='cartcomponent'>
         <div className='cartcomponent-main'>
@@ -38,7 +38,7 @@ const CartComponent = () => {
                 <div className="cartitems-total">
                     <div className="cartitems-total-item">
                         <p>Subtotal</p>
-                        <p>0</p>
+                        <p>${getCartTotal()}</p>
                     </div>
                     <hr/>
                     <div className="cartitems-total-item">
@@ -48,7 +48,7 @@ const CartComponent = () => {
                     <hr/>
                     <div className="cartitems-total-item">
                         <p>Total</p>
-                        <p>0</p>
+                        <p>${getCartTotal()}</p>
                     </div>
                 </div>
                 <button>Proceed to Buy</button>
