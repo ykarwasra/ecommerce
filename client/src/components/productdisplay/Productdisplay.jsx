@@ -1,7 +1,16 @@
 import React from 'react'
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { shopContext } from '../../context/shopContext';
 import "./Productdisplay.css"
 const Productdisplay = (props) => {
     const {product}=props;
+    const {addToCart,cart}=useContext(shopContext);
+    const navigate = useNavigate();
+    const handleAddButton=()=>{
+        addToCart(product.id);
+       
+    }
   return (
     <div className='product-display'>
         <div className='product-display-left'>
@@ -30,7 +39,7 @@ const Productdisplay = (props) => {
                     <div>XL</div>
                 </div>
             </div>
-            <button>Add to cart</button>
+            <button onClick={handleAddButton}>Add to cart</button>
         </div>
     </div>
   )
