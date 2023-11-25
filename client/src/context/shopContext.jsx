@@ -41,7 +41,9 @@ const ShopContextProvider=(props)=>{
         }
         return total;
     }
-    const contextValue={allProducts,cart,addToCart,removeFromCart,getCartTotal,getCartItem};
+    const [category,setCategory]=useState("Shop");
+
+    const contextValue={allProducts,cart,addToCart,removeFromCart,getCartTotal,getCartItem,category,setCategory};
     return(
         <shopContext.Provider value={contextValue}>
             {props.children}

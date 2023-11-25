@@ -1,23 +1,22 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./Navbar.css"
 import logo from "../asset/logo.png"
 import cartlogo from"../asset/cart-icon.png"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { shopContext } from '../../context/shopContext'
 const Navbar = () => {
- const [menu,setMenu]=useState("shop");
- const {getCartItem}=useContext(shopContext);
+ const {getCartItem,category,setCategory}=useContext(shopContext);
   return (
     <div className='navbar'>
       <div className='nav-logo'>
         <img src={logo} alt="navbar-logo"/>
-        <p>SHOPPER</p>
+        <Link style={{textDecoration:'none'}} to="/" ><p>SHOPPER</p></Link>
       </div>
       <ul className='nav-menu'>
-        <li onClick={()=>setMenu("Shop")}><Link style={{textDecoration:'none'}}to="/">Shop</Link>{menu==="Shop"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
-        <li onClick={()=>setMenu("Men")}><Link style={{textDecoration:'none'}}to="/men">Men</Link>{menu==="Men"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
-        <li onClick={()=>setMenu("Women")}><Link style={{textDecoration:'none'}}to="/women">Women</Link>{menu==="Women"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
-        <li onClick={()=>setMenu("Kids")}><Link style={{textDecoration:'none'}}to="/kids">Kids</Link>{menu==="Kids"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li ><Link onClick={()=>{setCategory("Shop")}} style={{textDecoration:'none'}}to="/">Shop</Link>{category==="Shop"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li ><Link onClick={()=>{setCategory("Men")}} style={{textDecoration:'none'}}to="/men">Men</Link>{category==="Men"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li ><Link onClick={()=>{setCategory("Women")}} style={{textDecoration:'none'}}to="/women">Women</Link>{category==="Women"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
+        <li ><Link onClick={()=>{setCategory("Kids")}} style={{textDecoration:'none'}}to="/kids">Kids</Link>{category==="Kids"?<hr style={{height:'2px', width:'30px',backgroundColor:'#716D6C', borderRadius:'10px'}}/>:<></>}</li>
       </ul>
       <div className='nav-login-cart'>
         <Link to="/login"><button>Login</button></Link>
